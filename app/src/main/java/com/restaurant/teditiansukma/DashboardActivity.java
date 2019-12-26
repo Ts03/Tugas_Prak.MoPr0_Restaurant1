@@ -1,7 +1,9 @@
 package com.restaurant.teditiansukma;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
@@ -77,7 +79,10 @@ public boolean onCreateOptionsMenu(Menu menu){
 @Override
 public boolean onOptionsItemSelected(@NonNull MenuItem item){
     switch(item.getItemId()){
-        case R.id.menu_logout:session.logoutUser();
+        case R.id.menu_logout: session.logoutUser();
+        break;
+        case R.id.menu_account:startActivity(new Intent(
+                DashboardActivity.this,ProfileActivity.class));
         break;
     }
     return true;

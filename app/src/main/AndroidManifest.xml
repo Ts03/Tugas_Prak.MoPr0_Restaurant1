@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DashboardActivity"/>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".auth.RegisterActivity" />
         <activity android:name=".auth.LoginActivity">
             <intent-filter>

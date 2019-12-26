@@ -25,7 +25,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.My
 
 
     private Context ctx;
-    private AdapterView.OnItemClickListener mOnItemClickListener;
+    private OnItemClickListener mOnItemClickListener;
     public interface OnItemClickListener{
         void onClick(int position);
     }
@@ -59,7 +59,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.My
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mOnItemClickListener.onClick(position)
+                mOnItemClickListener.onClick(position);
             }
         });
     }
@@ -68,7 +68,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.My
         return listItem.size();
     }
     public void add(RestaurantItem item){listItem.add(item);
-    notifyItemInserted(listItem.size()+1);
+        notifyItemInserted(listItem.size()+1);
     }
     public void addAll(List<RestaurantItem>listItem){
         for(RestaurantItem item:listItem){

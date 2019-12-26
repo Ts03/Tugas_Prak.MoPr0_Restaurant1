@@ -1,4 +1,4 @@
-<?xmlversion="1.0"encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_below="@id/iv_restaurant"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="8dp"
-                android:text="NamaRM"
+                android:text="Nama Rumah Makan"
                 android:textStyle="bold"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

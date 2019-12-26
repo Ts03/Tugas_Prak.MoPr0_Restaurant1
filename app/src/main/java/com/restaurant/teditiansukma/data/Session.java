@@ -9,6 +9,7 @@ import com.restaurant.teditiansukma.DashboardActivity;
 import com.restaurant.teditiansukma.auth.LoginActivity;
 
 public class Session {
+
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     Context _context;
@@ -16,6 +17,7 @@ public class Session {
     private static final String PREF_NAME = "restoMobpro";
     private static final String IS_LOGIN = "IsLoged";
     private static final String IS_NOT_ALARMT = "IsAlarm";
+    private static final String  USER_ID = "userId";
 
     public Session(Context context) {
         this._context = context;
@@ -60,4 +62,14 @@ public class Session {
         editor.putBoolean(IS_LOGIN, v);
         editor.commit();
     }
+
+    public String getUserId() {
+        return pref.getString(USER_ID,"no_id");
+    }
+
+    public void setUserId(String v){
+        editor.putString(USER_ID, v);
+        editor.commit();
+    }
+
 }
